@@ -1,0 +1,46 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "LSS",
+    "patterns": [
+        {
+            "name": "comment.line.lss",
+            "match": "^\\s*;(?!;).*"
+        },
+				{
+						"name": "keyword.other.groupheader.lss",
+						"match": "^\\s*;;.*$"
+				},
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "constant.language.stringprint.lss",
+                    "match": "%s"
+                },
+                {
+                    "name": "constant.language.hex.lss",
+                    "match": "\\b[0-9a-fA-F]{2}\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.lss",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.lss",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.LSS"
+}

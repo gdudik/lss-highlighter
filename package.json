@@ -1,0 +1,25 @@
+{
+  "name": "lss",
+  "displayName": "LSS",
+  "description": ".lss",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "LSS",
+      "aliases": ["LSS", "lss"],
+      "extensions": [".lss"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "LSS",
+      "scopeName": "source.LSS",
+      "path": "./syntaxes/lss.tmLanguage.json"
+    }]
+  }
+}
