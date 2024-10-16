@@ -6,10 +6,14 @@
             "name": "comment.line.lss",
             "match": "^\\s*;(?!;).*"
         },
-				{
-						"name": "keyword.other.groupheader.lss",
-						"match": "^\\s*;;.*$"
-				},
+        {
+            "name": "keyword.other.groupheader.lss",
+            "match": "^\\s*;;.*$"
+        },
+        {
+            "name": "constant.character.backslash.lss",
+            "match": "\\\\"
+        },
         {
             "include": "#keywords"
         },
@@ -22,7 +26,7 @@
             "patterns": [
                 {
                     "name": "constant.language.stringprint.lss",
-                    "match": "%s"
+                    "match": "%.*?\\.?[^<]*?s"
                 },
                 {
                     "name": "constant.language.hex.lss",

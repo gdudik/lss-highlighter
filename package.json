@@ -3,6 +3,10 @@
   "displayName": "LSS",
   "description": ".lss",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gdudik/lss-highlighter"
+  },
   "engines": {
     "vscode": "^1.94.0"
   },
@@ -10,6 +14,47 @@
     "Programming Languages"
   ],
   "contributes": {
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "constant.language.hex.lss",
+            "settings": {
+              "foreground": "#9cdcfe"
+             
+            }
+          },
+          {
+            "scope": "source.LSS",
+            "settings": {
+              "foreground": "#9e9e9e"
+             
+            }
+          },
+          {
+            "scope": "constant.language.stringprint.lss",
+            "settings": {
+              "foreground": "#4EC9B0",
+              "fontStyle": "bold"
+            }
+          },
+          {
+            "scope": "constant.character.backslash.lss",
+            "settings": {
+              "foreground": "#4EC9B0",
+              "fontStyle": "bold"
+            }
+          },
+          {
+            "scope": "keyword.other.groupheader.lss",
+            "settings": {
+              "foreground": "#C586C0",
+              "fontStyle": "bold italic"
+            }
+          }
+        ]
+      }
+    },
     "languages": [{
       "id": "LSS",
       "aliases": ["LSS", "lss"],
